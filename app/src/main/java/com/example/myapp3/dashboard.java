@@ -1,3 +1,4 @@
+/*
 package com.example.myapp3;
 
 import android.app.ProgressDialog;
@@ -45,19 +46,25 @@ public class dashboard extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        /*AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+        */
+/*AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment2);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);*/
+        NavigationUI.setupWithNavController(navView, navController);*//*
 
+
+*/
+/*
         items = new ArrayList<>();
 
 
         lv = (ListView) findViewById(R.id.listview);
 
         new dashboard.GetItems().execute();
+*//*
+
 
 
     }
@@ -111,13 +118,24 @@ public class dashboard extends AppCompatActivity {
                 pDialog.dismiss();
             }
             // display the items
-            System.out.println("items size = "+items.size());
+   */
+/*         System.out.println("items size = "+items.size());
             ListAdapter adapter = new SimpleAdapter(dashboard.this, items, R.layout.dashboard_main,
-                    new String[]{KEY_LINK/*, KEY_PUBDATE, KEY_GUID*/},
-                    new int[]{R.id.link/*, R.id.pubDate, R.id.guid*/});
+                    new String[]{KEY_LINK*//*
+*/
+/*, KEY_PUBDATE, KEY_GUID*//*
+*/
+/*},
+                    new int[]{R.id.link*//*
+*/
+/*, R.id.pubDate, R.id.guid*//*
+*/
+/*});
 
-            lv.setAdapter(adapter);
+            lv.setAdapter(adapter);*//*
+
         }
     }
 
 }
+*/

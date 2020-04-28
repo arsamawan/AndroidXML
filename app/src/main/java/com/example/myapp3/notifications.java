@@ -1,3 +1,4 @@
+/*
 package com.example.myapp3;
 
 import android.app.ProgressDialog;
@@ -55,10 +56,12 @@ public class notifications extends AppCompatActivity {
         items = new ArrayList<>();
 
 
-        lv = (ListView) findViewById(R.id.listview);
+  */
+/*      lv = (ListView) findViewById(R.id.listview);
 
         new notifications.GetItems().execute();
 
+*//*
 
     }
 
@@ -110,13 +113,16 @@ public class notifications extends AppCompatActivity {
             if (pDialog.isShowing()) {
                 pDialog.dismiss();
             }
-            // display the items
+*/
+/*            // display the items
             System.out.println("items size = "+items.size());
             ListAdapter adapter = new SimpleAdapter(notifications.this, items, R.layout.fragment_home,
                     new String[]{KEY_LINK, KEY_PUBDATE, KEY_GUID},
                     new int[]{R.id.link, R.id.pubDate, R.id.guid});
 
-            lv.setAdapter(adapter);
+            lv.setAdapter(adapter);*//*
+
         }
     }
 }
+*/

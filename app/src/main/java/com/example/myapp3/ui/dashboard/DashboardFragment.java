@@ -15,7 +15,6 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.myapp3.MainActivity;
 import com.example.myapp3.R;
-import com.example.myapp3.dashboard;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,6 +22,7 @@ import java.util.HashMap;
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
+ //  private Object String;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -33,10 +33,15 @@ public class DashboardFragment extends Fragment {
 
         final TextView textView = root.findViewById(R.id.text_dashboard);
         ArrayList<HashMap<String, String>> items = dashboardViewModel.getText();
+        textView.setText(items.get(0).get("link").toString());
+       // TextView.setText(TextView.getText().toString() + String)
 
-                textView.setText("its an test from ---"+items.get(0).get("link").toString());
 
+
+        System.out.println("TEXTVIEW CHECK TEST = " + textView);
 
         return root;
     }
 }
+
+

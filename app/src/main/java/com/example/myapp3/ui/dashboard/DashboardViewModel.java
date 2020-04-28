@@ -53,8 +53,9 @@ public class DashboardViewModel extends ViewModel {
             //adding each child to hashmap
 
             map.put(KEY_LINK, parser.getValue(e, KEY_LINK));
-            //  map.put(KEY_PUBDATE, parser.getValue(e, KEY_PUBDATE));
-            //  map.put(KEY_GUID, parser.getValue(e, KEY_GUID));
+
+             map.put(KEY_PUBDATE, parser.getValue(e, KEY_PUBDATE));
+            // map.put(KEY_GUID, parser.getValue(e, KEY_GUID));
 
             //adding hashmap to arraylist
 
@@ -63,5 +64,6 @@ public class DashboardViewModel extends ViewModel {
 
         }
         return items;
+
     }
 }

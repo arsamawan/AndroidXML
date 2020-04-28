@@ -13,6 +13,10 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.myapp3.R;
+import com.example.myapp3.ui.dashboard.DashboardViewModel;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class NotificationsFragment extends Fragment {
 
@@ -20,16 +24,20 @@ public class NotificationsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
+        NotificationsViewModel notificationsViewModel = ViewModelProviders.of(this).get(NotificationsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+
+
+
         final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        ArrayList<HashMap<String, String>> items = notificationsViewModel.getText();
+        textView.setText(items.get(0).get("guid").toString());
+        // TextView.setText(TextView.getText().toString() + String)
+
+
+
+        System.out.println("TEXTVIEW CHECK TEST = " + textView);
+
         return root;
     }
 }

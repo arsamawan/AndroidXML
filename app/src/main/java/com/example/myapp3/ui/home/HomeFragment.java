@@ -13,23 +13,30 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.myapp3.R;
+import com.example.myapp3.ui.dashboard.DashboardViewModel;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
+        DashboardViewModel homeViewModel = ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+
+
+        final TextView textView = root.findViewById(R.id.home_textview);
+        ArrayList<HashMap<String, String>> items = homeViewModel.getText();
+        textView.setText(items.get(0).get("pubDate").toString());
+        // TextView.setText(TextView.getText().toString() + String)
+
+
+
+        System.out.println("TEXTVIEW CHECK TEST = " + textView);
+
         return root;
     }
 }
