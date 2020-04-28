@@ -10,7 +10,7 @@
         android:id="@+id/home_textview"
         android:layout_width="323dp"
         android:layout_height="134dp"
-        android:text="TextView"
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="60dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,8 +29,12 @@ public class HomeFragment extends Fragment {
 
 
         final TextView textView = root.findViewById(R.id.home_textview);
+       /* final TextView textView2 = root.findViewById(R.id.home_textview2);
+        final TextView textView3 = root.findViewById(R.id.home_textview3);*/
         ArrayList<HashMap<String, String>> items = homeViewModel.getText();
-        textView.setText(items.get(0).get("pubDate").toString());
+        textView.setText(items.get(0).get("link").toString() +" "+ items.get(1).get("link").toString() +" "+ items.get(2).get("link"));
+       // textView2.setText(items.get(1).get("link").toString());
+       // textView3.setText(items.get(2).get("link"));
         // TextView.setText(TextView.getText().toString() + String)
 
 

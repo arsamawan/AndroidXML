@@ -31,12 +31,13 @@ public class NotificationsFragment extends Fragment {
 
         final TextView textView = root.findViewById(R.id.text_notifications);
         ArrayList<HashMap<String, String>> items = notificationsViewModel.getText();
-        textView.setText(items.get(0).get("guid").toString());
-        // TextView.setText(TextView.getText().toString() + String)
+        for(int i = 0 ; i<items.size();i++) {
+            textView.setText(items.get(i).get("guid").toString());
+
+        }
 
 
 
-        System.out.println("TEXTVIEW CHECK TEST = " + textView);
 
         return root;
     }

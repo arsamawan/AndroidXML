@@ -33,7 +33,11 @@ public class DashboardFragment extends Fragment {
 
         final TextView textView = root.findViewById(R.id.text_dashboard);
         ArrayList<HashMap<String, String>> items = dashboardViewModel.getText();
-        textView.setText(items.get(0).get("link").toString());
+        for(int i = 0 ; i<items.size();i++) {
+            textView.setText(items.get(i).get("link").toString());
+
+        }
+
        // TextView.setText(TextView.getText().toString() + String)
 
 
